@@ -1,0 +1,50 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MediaApp.Video"
+             BackgroundColor="#000000"
+             Shell.PresentationMode="Modal">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="0">
+
+            <toolkit:MediaElement 
+                Source="embed://Muse.mp4"
+                ShouldAutoPlay="True"
+                ShouldShowPlaybackControls="True"
+                HeightRequest="300"
+                Aspect="AspectFit"
+                BackgroundColor="#000000" />
+
+            <VerticalStackLayout Padding="24, 24, 24, 40" Spacing="24">
+
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Wembley Stadium"
+                           FontSize="28"
+                           FontAttributes="Bold"
+                           TextColor="#FFFFFF" />
+
+                    <Label Text="Uno de los conciertos de Muse mas legendarios, con interpretacion de canciones unicas y un repertorio espectacular"
+                           FontSize="15"
+                           TextColor="#8E8E93"
+                           LineBreakMode="WordWrap" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="16">
+                    
+
+                    <Button x:Name="CerrarBtn"
+                            Clicked="CerrarBtnClicked"
+                            Text="Cerrar reproductor"
+                            BackgroundColor="#1C1C1E"
+                            TextColor="#FFFFFF"
+                            FontSize="17"
+                            FontAttributes="Bold"
+                            CornerRadius="14"
+                            HeightRequest="54" />
+                </VerticalStackLayout>
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
